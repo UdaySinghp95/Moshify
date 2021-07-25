@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
-  --color-heading: #1b0760;
-  --color-body: #918ca4;
+  --primary-color: #00d9ff;
+  --secondary-color: #2584ff;
+  --accent-color: #ff3400;
+  --heading-color: #1b0760;
+  --body-color: #918ca4;
 }
 
 /* Typography */
@@ -13,16 +13,16 @@ html {
 }
 
 body {
-  color: var(--color-body);
+  color: var(--body-color);
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
+  color: var(--heading-color);
   margin-bottom: 2rem;
 }
 
@@ -38,6 +38,10 @@ h3 {
   font-size: 3rem;
 }
 
+p {
+  margin-top: 0px;
+}
+
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: 8rem;
@@ -47,6 +51,9 @@ h3 {
   }
   h3 {
     font-size: 2.4rem;
+  }
+  body {
+    font-size: 1.8rem;
   }
 }
 
@@ -58,7 +65,7 @@ a {
 
 .link-arrow {
   font-size: 2rem;
-  color: var(--color-accent);
+  color: var(--accent-color);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -76,4 +83,76 @@ a {
   .link-arrow {
     font-size: 1.5rem;
   }
+}
+
+/* Badges */
+
+.badge {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 1.5em;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.badge--primary {
+  background: var(--primary-color);
+}
+
+.badge--secondry {
+  background: var(--secondary-color);
+}
+
+.badge-small {
+  font-size: 1.6rem;
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  color: var(--heading-color);
+  padding-left: 0;
+}
+
+.inline--list .list__item {
+  display: inline-block;
+  margin-right: 5.6rem;
+}
+
+.tick-list {
+  list-style: url("/assets/tick.svg");
+  padding-left: 3rem;
+}
+
+.tick-list .list__item {
+  padding-left: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .tick-list .list__item {
+    padding-left: 0px;
+  }
+}
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--primary-color);
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
